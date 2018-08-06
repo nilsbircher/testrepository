@@ -16,6 +16,9 @@ Paragraph 1
 ###### Inspired by the following articles: 
 * https://blockgeeks.com/guides/what-is-blockchain-technology/
 * https://www.ibm.com/blockchain
+* https://hackernoon.com/a-beginners-guide-to-blockchain-d04266844e7
+* https://www.forbes.com/sites/bernardmarr/2017/01/24/a-complete-beginners-guide-to-blockchain/#26f204c46e60
+* https://medium.com/blockchain-education-network/what-is-blockchain-explained-for-beginners-5e747cea271
 
 ## 2) Ethereum - Basics
 
