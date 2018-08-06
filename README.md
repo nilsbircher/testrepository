@@ -1,11 +1,22 @@
-# testrepository
+# Introduction to a DApp 
 
-Testparagraph
+The goal of this overview article is to retain my path from having almost no experience with Blockchain Applications, especially from a technical point of view, to having some idea. If one has already been in touch with the technology several chapters can be skipped ahead as it starts with the very basics about a blockchain. 
+The focus will be on setting up / developing a DApp based on the Ethereum blockchain. 
 
-* Testingthestar
+# Table of contents
 
-Testparagraph
+1) Blockchain - Basics
+2) Ethereum - Basics 
+3) XXX
 
-# Chapter two 
+# 1) Blockchain - Basics
 
-Testparagraph
+Paragraph 1
+
+# 2) Ethereum - Basics
+
+Paragraph 2
+
+# 3) XXX
+
+Paragraph 3
