@@ -11,7 +11,7 @@ The focus will be on setting up / developing a DApp based on the Ethereum blockc
 
 ## 1) Blockchain - Basics
 
-Paragraph 1
+A blockchain is a public record of transactions which is saved in a distributed manner. Hence, there are many instances of the database saved on a multitude of computers. The real change the first blockchain projects brought is how an agreement is formed to decide upon the valid version of the database and how new transactions are handled and added to the database. 
 
 ###### Inspired by the following articles: 
 * https://blockgeeks.com/guides/what-is-blockchain-technology/
