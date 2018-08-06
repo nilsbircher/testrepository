@@ -27,3 +27,8 @@ Paragraph 2
 ## 3) XXX
 
 Paragraph 3
+
+## X) Other interesting resources / Topics: 
+
+#### Geth
+* https://ethereum.stackexchange.com/questions/28703/full-list-of-geth-terminal-commands
