@@ -13,6 +13,10 @@ The focus will be on setting up / developing a DApp based on the Ethereum blockc
 
 Paragraph 1
 
+###### Inspired by the following articles: 
+* https://blockgeeks.com/guides/what-is-blockchain-technology/
+* https://www.ibm.com/blockchain
+
 ## 2) Ethereum - Basics
 
 Paragraph 2
