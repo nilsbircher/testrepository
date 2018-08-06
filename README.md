@@ -2,7 +2,7 @@
 
 Testparagraph
 
-*Testingthestar
+* Testingthestar
 
 Testparagraph
 
