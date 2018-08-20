@@ -11,7 +11,7 @@ Die komplette Logik der Gewinn- und Verlustberechnungen liegt in SmartContracts 
 
 Um die Umgebungen auf Windows zum laufen zu bringen werden verschiedene Komponenten benötigt. Diese werden unten aufgelistet und es wird beschrieben, was es bei der Installation/beim Betrieb zu beachten gibt. 
 
-#### Geth
+### Geth
 
 Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [here](https://geth.ethereum.org/downloads/ "Ethereum Geth Node") . 
 Geth is a command line tool and hence it is started in the command line from where we will use it later on to create our private Blockchain 
@@ -30,13 +30,13 @@ Der zweite Teil ab init ruft dann das customgenesis File auf, welches die Parame
 Falls etwas im genesis-File geändert werden muss oder etwas nicht funktioniert, empfiehlt es sich, alle Files im verwendeten Ordner zu löschen und den Vorgang zu wiederholen. Jedes Mal ändert sich die Adresse der enode und somit muss der Server an der Stelle, wo die enode eingesetzt wird, geändert werden und ebenfalls neu gestartet werden.
 
 
-#### Server
+### Server
 
 Der Server, welcher in Java geschrieben wurde, habe ich mit Eclipse geöffnet. 
 
 Die zuvor genannte enode muss im Server eingertagen werden unter "..\aim-smartwatcher\node\target\classes\ethereumj.conf".
 
-#### Komplettes aufsetzen der lokalen Umgebung (z.B. bei einem Fehler)
+### Komplettes aufsetzen der lokalen Umgebung (z.B. bei einem Fehler)
 
 1) Files aus dem angelegten Ordner löschen, folgenden befehl ausführen in der command line: "geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
 
