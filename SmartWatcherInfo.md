@@ -11,7 +11,7 @@ Die komplette Logik der Gewinn- und Verlustberechnungen liegt in SmartContracts 
 
 Um die Umgebungen auf Windows zum laufen zu bringen werden verschiedene Komponenten benötigt. Diese werden unten aufgelistet und es wird beschrieben, was es bei der Installation/beim Betrieb zu beachten gibt. 
 
-##### Geth
+#### Geth
 
 Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [here](https://geth.ethereum.org/downloads/ "Ethereum Geth Node") . 
 Geth is a command line tool and hence it is started in the command line from where we will use it later on to create our private Blockchain 
@@ -23,15 +23,41 @@ geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils 
 
 Hierbei ist der erste Teil ein selbst erstelltes directory, bei mir mit dem namen "_aim_02_5_9", wobei es einen beliebigen Namen tragen kann und der Ordner an einem beliebigen Ort untergrbracht sein kann. 
 
+Um die später benötigten Log Files sauber abzulegen emphiehlt es sich, in dem Ordner ein Unterordner mit dem namen "logs" anzulegen. 
+
 Der zweite Teil ab init ruft dann das customgenesis File auf, welches die Parameter für die private Blockchain setzt. Nach ausführen des Befehls sollten verschieden Files im Ordner, welcher erstellt wurde, auftauchen. 
 
 Falls etwas im genesis-File geändert werden muss oder etwas nicht funktioniert, empfiehlt es sich, alle Files im verwendeten Ordner zu löschen und den Vorgang zu wiederholen. Jedes Mal ändert sich die Adresse der enode und somit muss der Server an der Stelle, wo die enode eingesetzt wird, geändert werden und ebenfalls neu gestartet werden.
 
 
+#### Server
 
+Der Server, welcher in Java geschrieben wurde, habe ich mit Eclipse geöffnet. 
 
+Die zuvor genannte enode muss im Server eingertagen werden unter "..\aim-smartwatcher\node\target\classes\ethereumj.conf".
 
-##### Server
+#### Komplettes aufsetzen der lokalen Umgebung (z.B. bei einem Fehler)
+
+1) Files aus dem angelegten Ordner löschen, folgenden befehl ausführen in der command line: "geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+
+2) Lokale Blockchain starten mit dem Befehl: geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" -verbosity 6 --port 30302 --networkid "8099" --ipcdisable --rpc --rpcapi "eth,personal,debug,web3" --rpcport 8101 --rpccorsdomain "*" --nodiscover --identity "master" console 2>> "C:\Users\Nils Bircher\Projects\_aim_02_5_9\logs\01.log"
+
+--> Hierbei wird die Blockchain gestartet und die Konsole wird aufgerufen. 
+--> Um den miner zu starten muss man den Befehl miner.start(1) eingeben, wobei 1 für die Anzahl der Threads benötigt wird. Bei meinem Windows Rechner lief der miner lediglich, wenn ich einen Thread angegreben habe. Evtl. mit 8 oder 4 versuchen und sonst ebenfalls 1 eingeben. 
+--> Der miner wird mit dem Befehl miner.stop() gestoppt. (Die klammern werden benötigt, sonst gibt es einen Error)
+
+3) Mit dem Befehl "admin" werden viele Informationen angezeigt, unter anderem die enode, welche für den Server benötigt wird. 
+
+4) Enode auf dem Server eintragen und dann den Server starten. 
+
+--> Um den Server überhaupt erfolgreich starten zu können, wird eine MongoDB benötigt. Diese kann hier heruntergeladen werden: https://www.mongodb.com/download-center?jmp=tutorials#community
+
+--> Die MongoDB muss lediglich im Hintergrund laufen und der Server speichert dann die angelegten User etc. in der MongoDB selbständig ab. 
+
+5) Bei gestartetem Miner sollte dann im Server ersichtlich sein, wie die Blocks vorzu geminet werden 
+
+6) Nun kann man z.B. mit Postman getestet werden, ob man einen neuen User anlegen kann. Unter "Additional Information" wird ein separates Kapitel erstellt, wie dies genau funktioniert.
+
 
 
 
