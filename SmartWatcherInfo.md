@@ -13,7 +13,7 @@ Um die Umgebungen auf Windows zum laufen zu bringen werden verschiedene Komponen
 
 ##### Geth
 
-Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [I'm an inline-style link with title](https://geth.ethereum.org/downloads/ "here:") https://geth.ethereum.org/downloads/. 
+Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [I'm an inline-style link with title](https://geth.ethereum.org/downloads/ "here:"). 
 Geth is a command line tool and hence it is started in the command line from where we will use it later on to create our private Blockchain 
 Der Server muss sich dann mit dieser Ethereum-Node verbinden und dies muss später in der Configurationsdatei des Severs festgehalten werden, mehr dazu im Abschnitt "Server". 
 
