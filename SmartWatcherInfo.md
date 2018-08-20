@@ -13,9 +13,25 @@ Um die Umgebungen auf Windows zum laufen zu bringen werden verschiedene Komponen
 
 ##### Geth
 
-Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [here:](https://geth.ethereum.org/downloads/ "Ethereum Geth Node"). 
+Geth runs a full Ethereum node implemented in Go and is needed for the project. In order for everything to work properly one needs Version 1.5.9 and it can be dowloaded [here](https://geth.ethereum.org/downloads/ "Ethereum Geth Node") . 
 Geth is a command line tool and hence it is started in the command line from where we will use it later on to create our private Blockchain 
 Der Server muss sich dann mit dieser Ethereum-Node verbinden und dies muss später in der Configurationsdatei des Severs festgehalten werden, mehr dazu im Abschnitt "Server". 
+Um die Befehle auf die eigenen Bedürfnisse anzupassen, emphiehlt es sich den Editor zu verwenden. 
+Die lokale Blockchain muss nach erfolgreichem installieren von geth erst initialisiert werden und dies wird mit folgendem Befehl ausgeführt: 
+
+geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+
+Hierbei ist der erste Teil ein selbst erstelltes directory, bei mir mit dem namen "_aim_02_5_9", wobei es einen beliebigen Namen tragen kann und der Ordner an einem beliebigen Ort untergrbracht sein kann. 
+
+Der zweite Teil ab init ruft dann das customgenesis File auf, welches die Parameter für die private Blockchain setzt. Nach ausführen des Befehls sollten verschieden Files im Ordner, welcher erstellt wurde, auftauchen. 
+
+Falls etwas im genesis-File geändert werden muss oder etwas nicht funktioniert, empfiehlt es sich, alle Files im verwendeten Ordner zu löschen und den Vorgang zu wiederholen. Jedes Mal ändert sich die Adresse der enode und somit muss der Server an der Stelle, wo die enode eingesetzt wird, geändert werden und ebenfalls neu gestartet werden.
+
+
+
+
+
+##### Server
 
 
 
