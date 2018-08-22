@@ -19,6 +19,9 @@ Der Server muss sich dann mit dieser Ethereum-Node verbinden und dies muss spät
 Um die Befehle auf die eigenen Bedürfnisse anzupassen, emphiehlt es sich den Editor zu verwenden. 
 Die lokale Blockchain muss nach erfolgreichem installieren von geth erst initialisiert werden und dies wird mit folgendem Befehl ausgeführt: 
 
+```sh
+geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+```
 geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
 
 Hierbei ist der erste Teil ein selbst erstelltes directory, bei mir mit dem namen "_aim_02_5_9", wobei es einen beliebigen Namen tragen kann und der Ordner an einem beliebigen Ort untergrbracht sein kann. 
