@@ -22,7 +22,10 @@ Die lokale Blockchain muss nach erfolgreichem installieren von geth erst initial
 ```sh
 geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
 ```
+
+```sh
 geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+```
 
 Hierbei ist der erste Teil ein selbst erstelltes directory, bei mir mit dem namen "_aim_02_5_9", wobei es einen beliebigen Namen tragen kann und der Ordner an einem beliebigen Ort untergrbracht sein kann. 
 
@@ -41,9 +44,15 @@ Die zuvor genannte enode muss im Server eingertagen werden unter "..\aim-smartwa
 
 ### Komplettes aufsetzen der lokalen Umgebung (z.B. bei einem Fehler)
 
-1) Files aus dem angelegten Ordner löschen, folgenden befehl ausführen in der command line: "geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+1) Files aus dem angelegten Ordner löschen, folgenden befehl ausführen in der command line: 
+```sh
+"geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" init "C:\Users\Nils Bircher\Projects\aim-smartwatcher\node\src\main\resources\genesis\customgenesis.json"
+```
 
-2) Lokale Blockchain starten mit dem Befehl: geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" -verbosity 6 --port 30302 --networkid "8099" --ipcdisable --rpc --rpcapi "eth,personal,debug,web3" --rpcport 8101 --rpccorsdomain "*" --nodiscover --identity "master" console 2>> "C:\Users\Nils Bircher\Projects\_aim_02_5_9\logs\01.log"
+2) Lokale Blockchain starten mit dem Befehl: 
+```sh
+geth --datadir="C:\Users\Nils Bircher\Projects\_aim_02_5_9" -verbosity 6 --port 30302 --networkid "8099" --ipcdisable --rpc --rpcapi "eth,personal,debug,web3" --rpcport 8101 --rpccorsdomain "*" --nodiscover --identity "master" console 2>> "C:\Users\Nils Bircher\Projects\_aim_02_5_9\logs\01.log"
+```
 
 --> Hierbei wird die Blockchain gestartet und die Konsole wird aufgerufen. 
 --> Um den miner zu starten muss man den Befehl miner.start(1) eingeben, wobei 1 für die Anzahl der Threads benötigt wird. Bei meinem Windows Rechner lief der miner lediglich, wenn ich einen Thread angegreben habe. Evtl. mit 8 oder 4 versuchen und sonst ebenfalls 1 eingeben. 
